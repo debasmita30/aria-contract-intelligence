@@ -272,15 +272,7 @@ def advanced_run(contract_text: str, simulate_failure: bool, threshold: float, s
         logs.append({"timestamp": "00:02.5", "agent": "ORCHESTRATOR", "level": "info", "message": "Failing over to localized fast-inference model..."})
     else: time.sleep(0.8)
     
-    analysis = llm_analyze(contract_text)
-
-if analysis:
-    reliability = analysis.get("reliability", 0.8)
-    improved_text = analysis.get("improved_contract", contract_text)
-else:
     analysis = ARIAEngine.analyze_contract(contract_text)
-    reliability = analysis["reliability"]
-    improved_text = contract_text
     rel = analysis["reliability"]
     failed = rel < threshold or simulate_failure
     recovered_input = analysis["fixed_text"] if failed else contract_text
