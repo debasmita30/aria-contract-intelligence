@@ -575,21 +575,30 @@ aria-contract-intelligence/
 <tr>
 <td align="center" width="50%">
 <b>REJECT Verdict + FTI Dashboard</b><br/><br/>
-<i>ARIA issues REJECT verdict with FTI 0.620, $2.5M–$5.0M exposure, 3 critical violations flagged</i>
+  <img width="1919" height="859" alt="image" src="https://github.com/user-attachments/assets/ab76749d-8831-419c-92fd-fa71974c6d28" />
+
+<i>ARIA issues REJECT verdict with FTI 0.639, $2.5M–$5.0M exposure, 3 critical violations flagged</i>
 </td>
 <td align="center" width="50%">
 <b>Autonomous Redline + Adversarial Analysis</b><br/><br/>
+  <img width="1516" height="765" alt="image" src="https://github.com/user-attachments/assets/1732339e-5113-48a4-b510-d882f8aee813" />
+
 <i>Self-healed clause rewrites with side-by-side diff and adversarial exploitation simulation</i>
+ <img width="1919" height="871" alt="image" src="https://github.com/user-attachments/assets/b92824d8-5bd3-4987-8428-61dd363c21df" />
+
 </td>
 </tr>
 <tr>
 <td align="center" width="50%">
 <b>Ask ARIA — Interactive Contract RAG</b><br/><br/>
+  <img width="1516" height="821" alt="image" src="https://github.com/user-attachments/assets/7ecd0cc3-11b3-4016-af84-8bd7235582d0" />
+
 <i>Multi-turn Q&A grounded in extracted clauses — liability cap, termination conditions, penalties</i>
 </td>
+
 <td align="center" width="50%">
-<b>Recovery Trace — Before vs After FTI</b><br/><br/>
-<i>System self-heals from FTI 0.42 (critical) to 0.78 (healthy) via Simplify+Retry strategy</i>
+  <img width="1187" height="714" alt="image" src="https://github.com/user-attachments/assets/39c37217-7112-4f96-a46f-fdde622ab490" />
+
 </td>
 </tr>
 </table>
