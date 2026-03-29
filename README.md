@@ -61,8 +61,8 @@
 
 | 🚀 [Live Demo](https://aria-contract-intelligence.streamlit.app/) | ❓ [Problem Statement](#-problem-statement) | 💡 [Solution](#-solution) |
 |:---:|:---:|:---:|
-| 🏗️ [Architecture](#-system-architecture) | ✨ [Features](#-features) | 🛠️ [Tech Stack](#%EF%B8%8F-tech-stack) |
-| ⚡ [Quick Start](#-quick-start) | 📁 [File Structure](#-file-structure) | 🗺️ [Roadmap](#%EF%B8%8F-roadmap) |
+| 🏗️ [Architecture](#-system-architecture) | 📸 [Screenshots](#-screenshots) |✨ [Features](#-features) | 🛠️ [Tech Stack](#%EF%B8%8F-tech-stack) |
+| ⚡ [Quick Start](#-quick-start) | 📁 [File Structure](#-file-structure) | 🗺️ [Roadmap](#%EF%B8%8F-roadmap) | 
 
 </div>
 
