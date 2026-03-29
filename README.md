@@ -647,7 +647,7 @@ Contributions are welcome.
 
 <br/>
 
-**Built for ET GenAI Hackathon 2025 — Enterprise AI Track**
+**Built for ET GenAI Hackathon — Enterprise AI Track**
 
 <br/>
 
