@@ -13,6 +13,35 @@ import pandas as pd
 from dotenv import load_dotenv
 from openai import OpenAI
 
+from openai import OpenAI
+import os
+import json
+
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+def llm_analyze(contract_text):
+    try:
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {
+                    "role": "system",
+                    "content": "You are a legal AI. Analyze the contract and return JSON with keys: reliability (0-1), issues (list), risks (dict), improved_contract (string)."
+                },
+                {
+                    "role": "user",
+                    "content": contract_text
+                }
+            ],
+            temperature=0.2
+        )
+
+        content = response.choices[0].message.content
+
+        return json.loads(content)
+
+    except Exception:
+        return None
 load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
