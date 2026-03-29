@@ -64,12 +64,14 @@
 ## ❓ Problem Statement
 
 <div align="center">
+
 ```
 Enterprises sign 200–500 contracts per quarter.
 Every single one is a potential liability waiting to be missed.
 ```
 
 </div>
+
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#0D1F3C', 'primaryTextColor': '#E0E0F0', 'primaryBorderColor': '#0A7EA4', 'lineColor': '#0A7EA4', 'secondaryColor': '#0a1628', 'tertiaryColor': '#060d1a', 'background': '#060d1a', 'mainBkg': '#0D1F3C', 'nodeBorder': '#0A7EA4', 'clusterBkg': '#0a1628', 'titleColor': '#E0E0F0', 'edgeLabelBackground': '#0D1F3C', 'fontFamily': 'monospace'}}}%%
 flowchart LR
@@ -117,10 +119,11 @@ flowchart LR
 <br/>
 
 ## 💡 Solution
+
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#0D1F3C', 'primaryTextColor': '#E0E0F0', 'primaryBorderColor': '#0A7EA4', 'lineColor': '#4ECDC4', 'secondaryColor': '#0a1628', 'background': '#060d1a', 'mainBkg': '#0D1F3C', 'clusterBkg': '#0a1628', 'titleColor': '#E0E0F0', 'fontFamily': 'monospace'}}}%%
 flowchart TD
-    TITLE(["🛡️ ARIA\nAutonomous Reliability & Intelligence Architecture\nEnterprise Contract Intelligence · Self-Healing by Design"])
+    TITLE(["🛡️ ARIA — Autonomous Reliability & Intelligence Architecture\nEnterprise Contract Intelligence · Self-Healing by Design"])
 
     subgraph PILLARS ["🏛️ Three Architectural Pillars"]
         direction LR
@@ -131,7 +134,7 @@ flowchart TD
 
     TITLE --> PILLARS
 
-    style TITLE fill:#0A7EA4,stroke:#4ECDC4,stroke-width:3px,color:#fff,font-size:14px
+    style TITLE fill:#0A7EA4,stroke:#4ECDC4,stroke-width:3px,color:#fff
     style P1 fill:#0d1a0d,stroke:#4ECDC4,color:#4ECDC4
     style P2 fill:#0d0d1a,stroke:#0A7EA4,color:#A8D5E2
     style P3 fill:#1a0d0d,stroke:#1A7A4A,color:#7DCEA0
@@ -143,6 +146,7 @@ ARIA is a **production-grade, multi-agent AI system** that transforms raw contra
 <br/>
 
 ## 🏗️ System Architecture
+
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#0D1F3C', 'primaryTextColor': '#E0E0F0', 'primaryBorderColor': '#0A7EA4', 'lineColor': '#0A7EA4', 'secondaryColor': '#0a1628', 'background': '#060d1a', 'mainBkg': '#0D1F3C', 'clusterBkg': '#060d1a', 'titleColor': '#E0E0F0', 'fontFamily': 'monospace'}}}%%
 flowchart TD
@@ -162,8 +166,8 @@ flowchart TD
     end
 
     subgraph RELIABILITY ["📊 Layer 3 — Reliability Engine"]
-        FTI["🔢 FTI Scorer\nFTI = (confidence × consistency)\n÷ (1 + complexity × 0.3)\nRange: 0.0 – 1.0"]
-        MON["🔍 Failure Monitor\nThreshold: FTI < 0.65\nClassifies failure type\nRoutes to recovery"]
+        FTI["🔢 FTI Scorer\nFTI = weighted_confidence x consistency\ndivided by 1 + complexity x 0.3\nRange: 0.0 to 1.0"]
+        MON["🔍 Failure Monitor\nThreshold: FTI less than 0.65\nClassifies failure type\nRoutes to recovery"]
     end
 
     subgraph RECOVERY ["🔄 Layer 4 — Self-Healing Recovery"]
@@ -174,7 +178,7 @@ flowchart TD
         NEG["🤝 Negotiation Agent\nArbitrates agent conflicts\nReconciles disagreements\nProduces unified view"]
     end
 
-    subgraph OUTPUT ["📤 Layer 5 — Output & Audit"]
+    subgraph OUTPUT ["📤 Layer 5 — Output and Audit"]
         direction LR
         VER["🔴 Verdict\nAPPROVE / REVIEW / REJECT\nRisk Level · FTI Score"]
         RPT["📋 Audit Report\nFull decision trace\nJSON export\nCompliance evidence"]
@@ -186,7 +190,7 @@ flowchart TD
     ORC --> EXT --> COM --> RSK
     AGENTS --> RELIABILITY
     FTI --> MON
-    MON -->|"FTI ≥ 0.65 ✅"| OUTPUT
+    MON -->|"FTI >= 0.65 ✅"| OUTPUT
     MON -->|"FTI < 0.65 ⚠️"| RECOVERY
     MEM --> STR --> REC --> NEG
     RECOVERY -->|"Re-run pipeline"| AGENTS
@@ -195,25 +199,20 @@ flowchart TD
     style I1 fill:#0D1F3C,stroke:#0A7EA4,color:#A8D5E2
     style I2 fill:#0D1F3C,stroke:#0A7EA4,color:#A8D5E2
     style I3 fill:#0a1628,stroke:#0A7EA4,color:#0A7EA4,stroke-dasharray:5
-
     style ORC fill:#1a0d1a,stroke:#8E44AD,color:#C39BD3
     style EXT fill:#0d1a0d,stroke:#4ECDC4,color:#4ECDC4
     style COM fill:#0d1628,stroke:#0A7EA4,color:#A8D5E2
     style RSK fill:#1a1209,stroke:#E67E22,color:#FFB673
-
     style FTI fill:#0D1F3C,stroke:#4ECDC4,color:#4ECDC4,stroke-width:2px
     style MON fill:#1a0d0d,stroke:#C0392B,color:#FF9999,stroke-width:2px
-
     style MEM fill:#0d1a0d,stroke:#1A7A4A,color:#7DCEA0
     style STR fill:#0D1F3C,stroke:#0A7EA4,color:#A8D5E2
     style REC fill:#1a1209,stroke:#E67E22,color:#FFB673
     style NEG fill:#1a0d1a,stroke:#8E44AD,color:#C39BD3
-
     style VER fill:#1a0d0d,stroke:#C0392B,color:#FF9999
     style RPT fill:#0d1628,stroke:#0A7EA4,color:#A8D5E2
     style RED fill:#0d1a0d,stroke:#1A7A4A,color:#7DCEA0
     style RAG fill:#1a0d1a,stroke:#4ECDC4,color:#4ECDC4
-
     style INPUT fill:#04080f,stroke:#0A7EA4,stroke-width:2px,color:#E0E0F0
     style AGENTS fill:#04080f,stroke:#4ECDC4,stroke-width:2px,color:#E0E0F0
     style RELIABILITY fill:#04080f,stroke:#E67E22,stroke-width:2px,color:#E0E0F0
@@ -223,7 +222,8 @@ flowchart TD
 
 <br/>
 
-### 🔄 Agent Interaction & Data Flow
+### 🔄 Agent Interaction and Data Flow
+
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#0D1F3C', 'primaryTextColor': '#E0E0F0', 'primaryBorderColor': '#0A7EA4', 'lineColor': '#4ECDC4', 'background': '#060d1a', 'mainBkg': '#0D1F3C', 'clusterBkg': '#060d1a', 'titleColor': '#E0E0F0', 'fontFamily': 'monospace'}}}%%
 graph LR
@@ -231,15 +231,15 @@ graph LR
     ORC -->|contract text| EXT["extraction_agent\n📄"]
     EXT -->|clauses + confidence| COM["compliance_agent\n✅"]
     COM -->|violations + score| RSK["risk_agent\n⚠️"]
-    RSK -->|"disagreement flag?"| NEG["negotiation_agent\n🤝"]
+    RSK -->|disagreement flag| NEG["negotiation_agent\n🤝"]
     EXT & COM & RSK & NEG -->|all AgentResults| FTI["reliability_engine\n📊 FTI Scorer"]
-    FTI -->|"FTI score + failure_type"| MON["failure_monitor\n🔍"]
-    MON -->|"strategy request"| MEM["memory_store\n📚"]
-    MEM -->|"best strategy"| STR["strategy_selector\n🎯"]
-    STR -->|"execute"| REC["recovery_agent\n⚡"]
-    REC -->|"re-run"| EXT
-    REC -->|"outcome"| MEM
-    MON -->|"healthy"| OUT["final_output\n📤"]
+    FTI -->|FTI score + failure type| MON["failure_monitor\n🔍"]
+    MON -->|strategy request| MEM["memory_store\n📚"]
+    MEM -->|best strategy| STR["strategy_selector\n🎯"]
+    STR -->|execute| REC["recovery_agent\n⚡"]
+    REC -->|re-run| EXT
+    REC -->|outcome| MEM
+    MON -->|healthy| OUT["final_output\n📤"]
 
     style TXT fill:#1a1209,stroke:#E67E22,color:#FFB673
     style ORC fill:#1a0d1a,stroke:#8E44AD,color:#C39BD3
@@ -258,21 +258,22 @@ graph LR
 <br/>
 
 ### 🧮 FTI — Failure Threshold Index
+
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#0D1F3C', 'primaryTextColor': '#E0E0F0', 'primaryBorderColor': '#0A7EA4', 'lineColor': '#4ECDC4', 'background': '#060d1a', 'mainBkg': '#0D1F3C', 'clusterBkg': '#060d1a', 'titleColor': '#E0E0F0', 'fontFamily': 'monospace'}}}%%
 flowchart TD
-    START(["📋 All Agent Results\nCollected"])
+    START(["📋 All Agent Results Collected"])
 
-    START --> WC["⚖️ Weighted Confidence\nExtraction × 0.35\nCompliance × 0.25\nRisk × 0.25\nNegotiation × 0.15"]
-    START --> CS["🔗 Consistency Score\nBlocked agent penalty: −0.15\nFailed agent penalty: −0.20\nDisagreement penalty: −0.12\nVariance penalty: up to −0.15"]
-    START --> CP["📐 Complexity Penalty\nWord count factor × 0.40\nSentence density × 0.35\nAmbiguity markers × 0.25"]
+    START --> WC["⚖️ Weighted Confidence\nExtraction x 0.35\nCompliance x 0.25\nRisk x 0.25\nNegotiation x 0.15"]
+    START --> CS["🔗 Consistency Score\nBlocked agent penalty: minus 0.15\nFailed agent penalty: minus 0.20\nDisagreement penalty: minus 0.12\nVariance penalty: up to minus 0.15"]
+    START --> CP["📐 Complexity Penalty\nWord count factor x 0.40\nSentence density x 0.35\nAmbiguity markers x 0.25"]
 
-    WC & CS & CP --> FORMULA["🧮 FTI Formula\n\nFTI = (weighted_confidence × consistency)\n      ÷ (1 + complexity × 0.30)\n\nRange: 0.0 – 1.0"]
+    WC & CS & CP --> FORMULA["🧮 FTI Formula\n\nFTI = weighted_confidence x consistency\n      divided by 1 + complexity x 0.30\n\nRange: 0.0 to 1.0"]
 
-    FORMULA --> CLASSIFY{"FTI\nClassifier"}
+    FORMULA --> CLASSIFY{"FTI Classifier"}
 
-    CLASSIFY -->|"FTI ≥ 0.75"| HEALTHY["✅ HEALTHY\nPipeline proceeds\nto final output"]
-    CLASSIFY -->|"0.65 ≤ FTI < 0.75"| DEGRADED["🟡 DEGRADED\nResult generated\nwith warning flags"]
+    CLASSIFY -->|"FTI >= 0.75"| HEALTHY["✅ HEALTHY\nPipeline proceeds\nto final output"]
+    CLASSIFY -->|"0.65 to 0.74"| DEGRADED["🟡 DEGRADED\nResult generated\nwith warning flags"]
     CLASSIFY -->|"FTI < 0.65"| CRITICAL["🔴 CRITICAL\nRecovery pipeline\ntriggered instantly"]
 
     CRITICAL --> FTYPE["🔎 Failure Type Classifier\nagent_error · agent_disagreement\nhigh_complexity · cascaded_failure\ncritical_confidence · low_confidence"]
@@ -281,7 +282,7 @@ flowchart TD
     style WC fill:#0d1a0d,stroke:#4ECDC4,color:#4ECDC4
     style CS fill:#0d1628,stroke:#0A7EA4,color:#A8D5E2
     style CP fill:#1a1209,stroke:#E67E22,color:#FFB673
-    style FORMULA fill:#0D1F3C,stroke:#4ECDC4,stroke-width:3px,color:#fff,font-size:14px
+    style FORMULA fill:#0D1F3C,stroke:#4ECDC4,stroke-width:3px,color:#fff
     style CLASSIFY fill:#1a1209,stroke:#E67E22,color:#FFE580
     style HEALTHY fill:#0d1a0d,stroke:#1A7A4A,color:#7DCEA0
     style DEGRADED fill:#1a1209,stroke:#E67E22,color:#FFB673
@@ -292,26 +293,26 @@ flowchart TD
 <br/>
 
 ### 🔄 Recovery Strategy Selection
+
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#0D1F3C', 'primaryTextColor': '#E0E0F0', 'primaryBorderColor': '#1A7A4A', 'lineColor': '#1A7A4A', 'background': '#060d1a', 'mainBkg': '#0D1F3C', 'clusterBkg': '#060d1a', 'titleColor': '#E0E0F0', 'fontFamily': 'monospace'}}}%%
 flowchart TD
-    FAIL(["⚠️ Failure Detected\nFTI < 0.65"])
+    FAIL(["⚠️ Failure Detected — FTI < 0.65"])
 
     FAIL --> MEM{"📚 Memory Store\nHas similar\nfailure history?"}
-    MEM -->|"Yes — confidence ≥ 0.1"| MSTRAT["Use historically\nbest strategy"]
+    MEM -->|"Yes"| MSTRAT["Use historically\nbest strategy"]
     MEM -->|"No history"| FTI2{"FTI < 0.30?\nCritical floor"}
 
     FTI2 -->|Yes| FALLBACK
-    FTI2 -->|No| FTYPE2{"Failure\nType?"}
+    FTI2 -->|No| FTYPE2{"Failure Type?"}
 
-    FTYPE2 -->|agent_error| RETRY["♻️ RETRY\nRe-execute same\nagent pipeline\nTransient error fix"]
-    FTYPE2 -->|agent_disagreement| NEGOTIATE["🤝 NEGOTIATE\nNegotiation Agent\narbitrates conflict\nReconciles outputs"]
-    FTYPE2 -->|high_complexity| DECOMPOSE["✂️ DECOMPOSE\nSplit contract into\n4 logical sections\nProcess independently"]
-    FTYPE2 -->|low_confidence| SIMPLIFY["🔤 SIMPLIFY + RETRY\nLLM rewrites contract\nin clearer language\nRe-run full pipeline"]
-    FTYPE2 -->|cascaded_failure| FALLBACK["🛡️ FALLBACK\nRule-based only\nNo LLM needed\nAlways succeeds"]
+    FTYPE2 -->|agent_error| RETRY["♻️ RETRY\nRe-execute same\nagent pipeline"]
+    FTYPE2 -->|agent_disagreement| NEGOTIATE["🤝 NEGOTIATE\nNegotiation Agent\narbitrates conflict"]
+    FTYPE2 -->|high_complexity| DECOMPOSE["✂️ DECOMPOSE\nSplit into 4 sections\nProcess independently"]
+    FTYPE2 -->|low_confidence| SIMPLIFY["🔤 SIMPLIFY + RETRY\nLLM rewrites contract\nRe-run full pipeline"]
+    FTYPE2 -->|cascaded_failure| FALLBACK["🛡️ FALLBACK\nRule-based only\nAlways succeeds"]
 
-    RETRY & NEGOTIATE & DECOMPOSE & SIMPLIFY & FALLBACK --> MEM2["📝 Update Memory Store\nOutcome · FTI delta\nFeature signature\nStrategy effectiveness"]
-
+    RETRY & NEGOTIATE & DECOMPOSE & SIMPLIFY & FALLBACK --> MEM2["📝 Update Memory Store\nOutcome · FTI delta · Feature signature"]
     MSTRAT --> RETRY
 
     style FAIL fill:#1a0d0d,stroke:#C0392B,color:#FF9999,stroke-width:2px
@@ -330,10 +331,11 @@ flowchart TD
 <br/>
 
 ### 🔍 Compliance Rule Engine
+
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#0D1F3C', 'primaryTextColor': '#E0E0F0', 'primaryBorderColor': '#0A7EA4', 'lineColor': '#0A7EA4', 'background': '#060d1a', 'mainBkg': '#0D1F3C', 'clusterBkg': '#060d1a', 'titleColor': '#E0E0F0', 'fontFamily': 'monospace'}}}%%
 flowchart LR
-    CONTRACT(["📄 Extracted\nClauses"]) --> ENGINE["⚙️ Compliance\nEngine"]
+    CONTRACT(["📄 Extracted Clauses"]) --> ENGINE["⚙️ Compliance Engine"]
 
     ENGINE --> R1["R1 · Weight 0.20\nPayment terms must be\nexplicitly defined"]
     ENGINE --> R2["R2 · Weight 0.20\nLiability must not be\nunilaterally ambiguous"]
@@ -343,11 +345,11 @@ flowchart LR
     ENGINE --> R6["R6 · Weight 0.10\nParty obligations\nmust be symmetric"]
     ENGINE --> R7["R7 · Weight 0.10\nIndemnification scope\nmust be bounded"]
 
-    R1 & R2 & R3 & R4 & R5 & R6 & R7 --> SCORE["📊 Weighted Compliance Score\n+ Severity Classification\nCritical · High · Medium · Low"]
+    R1 & R2 & R3 & R4 & R5 & R6 & R7 --> SCORE["📊 Weighted Compliance Score\nSeverity: Critical · High · Medium · Low"]
 
-    SCORE --> VERDICT{"Final\nVerdict"}
-    VERDICT -->|"Score ≥ 0.80"| A["✅ APPROVE\nProceed to sign"]
-    VERDICT -->|"0.55 – 0.79"| B["🟡 REVIEW\nNegotiate clauses"]
+    SCORE --> VERDICT{"Final Verdict"}
+    VERDICT -->|"Score >= 0.80"| A["✅ APPROVE\nProceed to sign"]
+    VERDICT -->|"0.55 to 0.79"| B["🟡 REVIEW\nNegotiate clauses"]
     VERDICT -->|"Score < 0.55"| C["🔴 REJECT\nDo not sign"]
 
     style CONTRACT fill:#0D1F3C,stroke:#0A7EA4,color:#A8D5E2
@@ -376,7 +378,7 @@ flowchart LR
 
 ### 🤖 Multi-Agent Orchestration
 - **6 specialized agents** with explicit role boundaries and structured JSON outputs
-- Every agent returns a **self-assessed confidence score** (0.0 – 1.0)
+- Every agent returns a **self-assessed confidence score** (0.0 to 1.0)
 - Upstream failures propagate as **confidence penalties**, not silent errors
 - Agent disagreement is **detected, flagged, and arbitrated** automatically
 
@@ -462,7 +464,7 @@ flowchart LR
 | **LLM Backbone** | ![Anthropic](https://img.shields.io/badge/Claude-Anthropic-6C63FF?style=flat-square&logoColor=white) | All agent reasoning and structured outputs |
 | **Data Processing** | ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white) ![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white) | ETL, contract feature extraction |
 | **Orchestration** | Custom Python Agent Framework | Multi-agent pipeline with confidence propagation |
-| **Reliability Engine** | Custom FTI Formula | Weighted confidence × consistency ÷ complexity |
+| **Reliability Engine** | Custom FTI Formula | Weighted confidence x consistency divided by complexity |
 | **Memory Store** | JSON persistence + feature-signature matching | Strategy effectiveness learning |
 | **Recovery Engine** | 5-strategy adaptive system | Autonomous self-healing |
 | **Language** | ![Python](https://img.shields.io/badge/Python-3.12+-3776AB?style=flat-square&logo=python&logoColor=white) | Core runtime |
@@ -473,6 +475,7 @@ flowchart LR
 <br/>
 
 ## ⚡ Quick Start
+
 ```bash
 # 1. Clone the repository
 git clone https://github.com/debasmita30/aria-contract-intelligence.git
@@ -499,6 +502,7 @@ Open **http://localhost:8501** — tick **"Use Sample Contract"** in the sidebar
 <br/>
 
 ## 📁 File Structure
+
 ```
 aria-contract-intelligence/
 │
@@ -512,9 +516,9 @@ aria-contract-intelligence/
 ├── 📁 core/
 │   ├── __init__.py
 │   ├── agents.py                      # All 6 agent classes with Claude API calls
-│   │                                  #   ExtractionAgent · ComplianceAgent
-│   │                                  #   RiskAgent · NegotiationAgent
-│   │                                  #   StrategyAgent · RecoveryAgent
+│   │                                  # ExtractionAgent · ComplianceAgent
+│   │                                  # RiskAgent · NegotiationAgent
+│   │                                  # StrategyAgent · RecoveryAgent
 │   ├── reliability.py                 # FTI formula engine + failure classification
 │   ├── memory.py                      # Persistent memory store with similarity matching
 │   ├── strategies.py                  # 5 recovery strategy implementations
@@ -550,31 +554,25 @@ aria-contract-intelligence/
 <table>
 <tr>
 <td align="center" width="50%">
-<b>REJECT Verdict + FTI Dashboard</b><br/>
-<img src="https://via.placeholder.com/600x350/0D1F3C/0A7EA4?text=REJECT+-+DO+NOT+SIGN+%7C+FTI+0.620" width="100%"/>
-<sub>ARIA issues REJECT verdict with FTI 0.620, $2.5M–$5.0M exposure, 3 critical violations flagged</sub>
+<b>REJECT Verdict + FTI Dashboard</b><br/><br/>
+<i>ARIA issues REJECT verdict with FTI 0.620, $2.5M–$5.0M exposure, 3 critical violations flagged</i>
 </td>
 <td align="center" width="50%">
-<b>Autonomous Redline + Adversarial Analysis</b><br/>
-<img src="https://via.placeholder.com/600x350/0D1F3C/C0392B?text=Autonomous+Redline+%7C+Clause+Rewrite" width="100%"/>
-<sub>Self-healed clause rewrites with side-by-side diff and adversarial exploitation simulation</sub>
+<b>Autonomous Redline + Adversarial Analysis</b><br/><br/>
+<i>Self-healed clause rewrites with side-by-side diff and adversarial exploitation simulation</i>
 </td>
 </tr>
 <tr>
 <td align="center" width="50%">
-<b>Ask ARIA — Interactive Contract RAG</b><br/>
-<img src="https://via.placeholder.com/600x350/0D1F3C/1A7A4A?text=Ask+ARIA+%7C+RAG+Chat+Interface" width="100%"/>
-<sub>Multi-turn Q&A grounded in extracted clauses — liability cap, termination conditions, penalties</sub>
+<b>Ask ARIA — Interactive Contract RAG</b><br/><br/>
+<i>Multi-turn Q&A grounded in extracted clauses — liability cap, termination conditions, penalties</i>
 </td>
 <td align="center" width="50%">
-<b>Recovery Trace — Before vs After FTI</b><br/>
-<img src="https://via.placeholder.com/600x350/0D1F3C/4ECDC4?text=Self-Healing+%7C+FTI+0.42+→+0.78" width="100%"/>
-<sub>System self-heals from FTI 0.42 (critical) to 0.78 (healthy) via Simplify+Retry strategy</sub>
+<b>Recovery Trace — Before vs After FTI</b><br/><br/>
+<i>System self-heals from FTI 0.42 (critical) to 0.78 (healthy) via Simplify+Retry strategy</i>
 </td>
 </tr>
 </table>
-
-> **Replace placeholder images above** with actual screenshots from https://aria-contract-intelligence.streamlit.app/
 
 <br/>
 
@@ -605,7 +603,7 @@ A mid-enterprise processing 200 contracts per quarter at 5 hours each spends **1
 - [ ] 📊 Portfolio intelligence — cross-contract pattern detection for systemic exposure analysis
 - [ ] 📱 PWA mobile mode — ARIA on-the-go for in-meeting contract triage
 - [ ] 🔔 Breach alerts — WhatsApp / email notification on deadline or obligation triggers
-- [ ] 🌍 Multi-language — Hindi, regional Indian language contract parsing
+- [ ] 🌍 Multi-language — Hindi and regional Indian language contract parsing
 
 <br/>
 
@@ -629,7 +627,7 @@ Contributions are welcome.
 
 <br/>
 
-**Built for ET GenAI Hackathon  — Enterprise AI Track**
+**Built for ET GenAI Hackathon 2025 — Enterprise AI Track**
 
 <br/>
 
