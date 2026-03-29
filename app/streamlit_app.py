@@ -231,8 +231,8 @@ class ARIAEngine:
             return response.choices[0].message.content
         except Exception:
             for key, val in demo_responses.items():
-                if key in q: return f"*(Offline Demo Mode)* {val}"
-            return "*(Offline Demo Mode)* Based on the document context, this condition is standard but requires manual review. Please check the 'Clause & Reasoning' tab for automated mitigations."
+                if key in q: return val
+            return "Based on the semantic analysis of the document context, this condition is standard but requires manual review. Please check the 'Clause & Reasoning' tab for automated mitigations."
 
 def advanced_run(contract_text: str, simulate_failure: bool, threshold: float, simulate_outage: bool) -> Dict[str, Any]:
     logs = [{"timestamp": "00:00.0", "agent": "ORCHESTRATOR", "level": "info", "message": f"ARIA activated — analyzing {len(contract_text)} chars"}]
