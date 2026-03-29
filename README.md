@@ -7,6 +7,11 @@
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Space+Mono&size=22&duration=2800&pause=700&color=00E5FF&center=true&vCenter=true&width=800&lines=Autonomous+Contract+Intelligence;Self-Healing+Multi-Agent+System;Reliability-Driven+AI" />
 </p>
+<p align="center">
+  <a href="https://github.com/debasmita30/aria-contract-intelligence/blob/main/ARIA_Self_Healing_Contract_Intelligence_System.pdf" target="_blank">
+    <img src="https://img.shields.io/badge/📄%20View%20Full%20Project%20Report-10b981?style=for-the-badge&logo=adobeacrobatreader&logoColor=black" />
+  </a>
+</p>
 
 <br/>
 
