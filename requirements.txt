@@ -1,0 +1,22 @@
+# ARIA — Autonomous Reliability & Intelligence Architecture
+# Python 3.10+
+
+# ── Core UI ────────────────────────────────────────────────────
+streamlit>=1.35.0
+plotly>=5.20.0
+networkx>=3.2
+
+# ── LLM Providers ──────────────────────────────────────────────
+anthropic>=0.28.0          # Claude (preferred)
+openai>=1.30.0             # OpenAI GPT-4o (optional fallback)
+
+# ── Scientific computing ───────────────────────────────────────
+numpy>=1.26.0
+scipy>=1.13.0              # Bayesian Beta distributions
+
+# ── Utilities ──────────────────────────────────────────────────
+python-dotenv>=1.0.0       # Load .env API keys
+pydantic>=2.0.0            # Data validation
+
+# ── Optional: faster JSON ──────────────────────────────────────
+# orjson>=3.9.0

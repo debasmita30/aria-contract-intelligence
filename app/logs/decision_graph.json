@@ -1,0 +1,22 @@
+[
+  {
+    "step": "extraction",
+    "status": "success"
+  },
+  {
+    "step": "compliance",
+    "status": "success"
+  },
+  {
+    "step": "risk",
+    "status": "success"
+  },
+  {
+    "step": "failure_detected",
+    "status": "yes"
+  },
+  {
+    "step": "recovery",
+    "status": "success"
+  }
+]

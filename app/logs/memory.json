@@ -1,0 +1,14 @@
+[
+  {
+    "pattern": "ambiguous liability clause",
+    "fix": "apply stricter parsing and request clarification"
+  },
+  {
+    "pattern": "ambiguous clause",
+    "fix": "Simplifying input and reprocessing..."
+  },
+  {
+    "pattern": "ambiguous clause",
+    "fix": "Simplifying input and reprocessing..."
+  }
+]
