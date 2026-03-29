@@ -1,6 +1,12 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=220&section=header&text=ARIA&fontSize=100&fontColor=fff&animation=fadeIn&fontAlignY=38&desc=Autonomous%20Reliability%20%26%20Intelligence%20Architecture%20%7C%20Self-Healing%20Enterprise%20Contract%20Intelligence&descAlignY=60&descSize=15" width="100%"/>
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00e5ff,100:7c3aed&height=220&section=header&text=ARIA&fontSize=90&fontColor=ffffff" />
+</p>
+
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Space+Mono&size=22&duration=2800&pause=700&color=00E5FF&center=true&vCenter=true&width=800&lines=Autonomous+Contract+Intelligence;Self-Healing+Multi-Agent+System;Reliability-Driven+AI" />
+</p>
 
 <br/>
 
@@ -506,28 +512,37 @@ Open **http://localhost:8501** — tick **"Use Sample Contract"** in the sidebar
 ```
 aria-contract-intelligence/
 │
-├── 📄 app.py                          # Main Streamlit dashboard — 8 tabs
-├── 📋 requirements.txt                # All dependencies
-├── 📖 README.md                       # This file
+├── app/ # Application Layer (UI + Entry)
+│ ├── streamlit_app.py # Main dashboard (Streamlit UI)
+│ ├── main.py # CLI / batch entrypoint
+│ └── config.py # Global configs & thresholds
 │
-├── 🔐 .streamlit/
-│   └── secrets.toml                   # ANTHROPIC_API_KEY (gitignored)
+├── core/ # Core Intelligence Layer
+│ ├── orchestrator.py # Controls full workflow pipeline
+│ ├── agents/ # All AI agents (modular)
+│ │ ├── extraction_agent.py
+│ │ ├── compliance_agent.py
+│ │ ├── risk_agent.py
+│ │ ├── negotiation_agent.py
+│ │ ├── recovery_agent.py
+│ │ └── strategy_agent.py
+│ │
+│ ├── reliability.py # FTI scoring engine
+│ ├── failure_monitor.py # Detects failure conditions
+│ ├── memory.py # Stores past failures + strategies
+│ └── strategies.py # Recovery strategies (retry, simplify, etc.)
 │
-├── 📁 core/
-│   ├── __init__.py
-│   ├── agents.py                      # All 6 agent classes with Claude API calls
-│   │                                  # ExtractionAgent · ComplianceAgent
-│   │                                  # RiskAgent · NegotiationAgent
-│   │                                  # StrategyAgent · RecoveryAgent
-│   ├── reliability.py                 # FTI formula engine + failure classification
-│   ├── memory.py                      # Persistent memory store with similarity matching
-│   ├── strategies.py                  # 5 recovery strategy implementations
-│   └── workflow_engine.py             # Orchestrator — full pipeline execution
+├── tools/ # Utilities Layer
+│ ├── llm_client.py # OpenAI wrapper (GPT integration)
+│ ├── parser.py # Contract parsing helpers
+│ ├── validators.py # Rule-based validations
+│ └── utils.py # Shared helpers
 │
-└── 📁 logs/                           # Auto-created at runtime
-    ├── audit_log.json                 # Per-run decision trace
-    ├── decision_graph.json            # Step-by-step execution graph
-    └── memory.json                    # Failure + recovery history store
+├── demo/ # Demo assets (CSV, sample contracts)
+├── evaluation/ # Testing & benchmarking
+│
+├── requirements.txt
+├── README.md
 ```
 
 <br/>
